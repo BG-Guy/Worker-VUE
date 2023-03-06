@@ -1,0 +1,318 @@
+.carousel__next {
+  background-color: #fff;
+  right: 8px;
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  color: black;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+}
+.carousel__prev {
+  background-color: #fff;
+  right: 8px;
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  color: black;
+
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+}
+
+.carousel__item {
+  width: 15%;
+}
+
+.breadcrumbs {
+  max-width: $screen-size-l;
+  margin-top: 60px;
+  cursor: pointer;
+  span {
+    font-family: macan-light;
+    padding-right: 0.5rem;
+  }
+  h1 {
+    padding: 1rem 0;
+    font-family: macan-bold;
+  }
+  p {
+    font-family: macan-regular;
+  }
+  span {
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+.gig-categorys-boxes {
+  margin: 0 auto;
+  gap: 10px;
+
+  & li {
+    width: 150px !important;
+    font-family: macan-regular;
+  }
+}
+.gig-filters {
+  // max-width: $screen-size-l;
+  margin: 0 auto;
+}
+
+.click-list {
+  padding: 16px 0;
+}
+
+.gig-categorys-boxes ol {
+  gap: 20px;
+}
+
+.gig-categorys-box {
+  margin-inline-end: 0 16px;
+  height: 150px;
+  max-width: 150px;
+  border: 1px solid #e4e5e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 17px;
+  box-shadow: 0 0.14px 2.29266px rgba(0, 0, 0, 0.032),
+    0 0.37px 4.42626px rgba(0, 0, 0, 0.048), 0 3px 7px rgba(0, 0, 0, 0.09);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 3.4623px 6.1418px rgba(0, 0, 0, 0.0523),
+      0 7.92923px 12.9218px rgba(0, 0, 0, 0.0476886),
+      0 9px 15px rgba(0, 0, 0, 0.08);
+    & span {
+      color: #1dbf73;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.gig-list {
+  max-width: $screen-size-xl;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+
+  grid-gap: 32px;
+  list-style-type: none;
+  padding: 0;
+  @media (min-width: $screen-size-s) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $screen-size-m) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: $screen-size-l) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gig-preview {
+    border: 1px solid #e4e5e7;
+    transition: 0.15s;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    :hover {
+      p {
+        color: #1dbf73;
+      }
+    }
+
+    & .el-carousel__container {
+      aspect-ratio: 3/2;
+      height: auto;
+
+      button {
+        height: 25px;
+        width: 20px;
+        border-radius: 1000px;
+      }
+
+      button:nth-child(1) {
+        background-color: #f2f3f4;
+        color: black;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        left: 0px;
+        & .el-icon {
+          right: 3px;
+        }
+      }
+      button:nth-child(2) {
+        background-color: #f2f3f4;
+        color: black;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        right: 0px;
+        & .el-icon {
+          left: 3px;
+        }
+      }
+    }
+
+    h4 {
+      font-size: 0.875rem;
+      font-family: macan-bold;
+      color: #222325;
+      line-height: 1.28;
+    }
+    h5 {
+      font-size: 0.875rem;
+      font-family: macan-regular;
+      color: #7a7d85;
+      line-height: 1.5;
+      font-weight: normal;
+    }
+
+    p {
+      overflow: hidden;
+      word-wrap: break-word;
+      word-break: break-word;
+      // max-height: 45px;
+      font-family: macan-regular;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 0 12px 5px;
+      margin-top: 5px;
+      height: 43px;
+      line-height: 22px;
+      color: #222325;
+      transition-timing-function: ease-in-out;
+      &:hover {
+        color: #1dbf73;
+        cursor: pointer;
+      }
+    }
+    small {
+      padding: 2px 0;
+      font-family: macan-semibold;
+      color: #b5b6ba;
+      font-size: 10px;
+      line-height: 1.8;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .img-container {
+      height: 100%;
+      width: 100%;
+      flex: 1;
+
+      img {
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+    }
+
+    .owner-prev {
+      display: flex;
+      align-items: center;
+      padding: 12px 12px 8px;
+      .owner-name-level {
+        margin-left: 8px;
+        font-family: macan-semibold;
+      }
+      img {
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+      }
+    }
+
+    .owner-rating {
+      display: flex;
+      padding: 10px 12px;
+      font-family: macan-regular;
+      font-weight: 700;
+      font-size: 14px;
+      color: rgb(255, 190, 91);
+      fill: rgb(255, 190, 91);
+      * {
+        margin-right: 0.3rem;
+      }
+
+      span:last-child {
+        color: #b5b6ba;
+        font-weight: 400;
+        margin-left: 2px;
+      }
+    }
+
+    .gig-footer {
+      display: flex;
+      padding: 10px 12px;
+      height: 59px;
+      border-top: 1px solid #efeff0;
+      .fa-heart {
+        transition: 0.15s;
+        color: rgb(181, 182, 186);
+        cursor: pointer;
+
+        &:hover {
+          color: rgba(218, 95, 95, 0.829);
+        }
+      }
+      justify-content: space-between;
+      align-items: center;
+
+      .price {
+        display: flex;
+        flex-direction: column;
+        font-family: macan-regular;
+        margin-top: 1px;
+        h6 {
+          padding: 2px 0 0;
+          font-size: rem(10.5px);
+          font-weight: 700;
+          color: #7a7d85;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+        span {
+          font-size: 1.125rem;
+          color: #404145;
+          font-weight: 700;
+          line-height: 1.1;
+          margin-inline-start: rem(6px);
+          font-family: macan-light;
+          display: flex;
+          justify-content: end;
+          sup {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .el-carousel__indicator {
+    border: none;
+  }
+}
+.services-counter {
+  line-height: 2rem;
+  font-family: macan-light;
+  color: #404145;
+  font-size: 0.875rem;
+  margin-block-start: rem(20px);
+  margin-block-end: rem(20px);
+  span {
+    font-family: macan-bold;
+    font-size: 2rem;
+    margin-inline-end: rem(10px);
+  }
+}

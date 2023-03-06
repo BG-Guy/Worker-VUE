@@ -1,0 +1,627 @@
+.gig-details-navbar-container {
+  background-color: #fff;
+  z-index: 8;
+  width: 100vw;
+  height: 40px;
+  // margin-left: .5rem;
+  // display: flex;
+  // align-items: center;
+  opacity: 1;
+  position: fixed;
+  border-bottom: 1px solid #e4e5e7;
+
+  // opacity: 0;
+  .gig-details-navbar {
+    @include for-mobile-layout {
+      display: none;
+    }
+    display: flex;
+
+    height: 100%;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin: 0 23px 0 1rem;
+      &:hover {
+        cursor: pointer;
+
+        a {
+          color: #74767e;
+        }
+      }
+      a {
+        color: #95979d;
+        font-family: macan-regular;
+      }
+    }
+  }
+}
+
+.gig-nav-link-active {
+  box-shadow: 0px 2px 0px 0px #19a463;
+  & a {
+    color: black !important;
+  }
+}
+
+.gig-sidebar-right {
+  // height: 60vh;
+  position: sticky;
+  top: 70px;
+  grid-column: 2/3;
+  @media (max-width: $screen-size-l) {
+    grid-column: 1/2;
+    position: relative;
+    top: 0;
+    justify-self: center;
+  }
+
+  .gig-checkout-card {
+    top: 0;
+
+    width: 100%;
+    max-height: 41rem;
+    // width: 100%;
+    // display: flex;
+    // flex-direction: column;
+
+    // padding: 1rem 1.5rem;
+
+    .card-content-container {
+      height: 28.18rem;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      border: $border-light;
+      margin-bottom: 1rem;
+      b {
+        font-family: macan-semibold;
+        letter-spacing: .9px;
+      }
+
+      & li {
+        display: flex;
+        align-items: center;
+        p {
+          margin-inline-start: 1rem;
+        }
+      }
+    }
+
+    .checkout-card-header {
+      display: flex;
+      justify-content: space-between;
+      height: 3rem;
+
+      * {
+        font-size: 1.5rem;
+        font-family: macan-bold;
+      }
+    }
+
+    .checkout-card-content {
+      margin-bottom: 1rem;
+      flex: 1;
+      > * {
+        margin-bottom: 1rem;
+        display: flex;
+        flex: 1;
+      }
+
+      .gig-features-container {
+        display: flex;
+        flex-direction: column;
+        li:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .checkout-card-footer {
+      height: 2.65rem;
+      align-items: center;
+      & button {
+        background-color: #1dbf73;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        display: flex;
+        align-items: stretch;
+        width: 100%;
+        justify-content: center;
+        height: 100%;
+        color: white;
+        font-size: 1rem;
+        font-family: macan-bold;
+        &:hover {
+          background-color: #19a463;
+        }
+        & p {
+          align-self: center;
+          color: white;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .gig-contact-seller-wrapper {
+      height: 5.625rem;
+      width: 100%;
+      background-color: #fafafa;
+      display: flex;
+
+      button {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1.4rem 1.4rem;
+        padding: $button-padding-sml;
+        color: #404145;
+        background-color: #fafafa;
+        border: 1px solid #404145;
+        border-radius: 4px;
+        p {
+          font-family: macan-bold;
+          margin-inline-end: 1rem;
+          font-size: 1rem;
+        }
+        &:hover {
+          background: #74767e;
+          border-color: transparent;
+          color: #fff;
+          cursor: pointer;
+
+          .arrow-down {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.gig-description-section {
+  grid-column: 1/2;
+  .gig-description p {
+    padding: 1rem 0;
+  }
+}
+
+.gig-details-main-content {
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: max(800px) max(400px);
+    // grid-template-areas: "side-left side-right";
+    max-width: 1400px;
+    width: 100%;
+    column-gap: 10%;
+  }
+  @media (max-width: 800px) {
+    
+   
+    row-gap: 30px;
+    justify-items: center;
+    .gig-sidebar-right {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+    }
+  }
+}
+
+.gig-reviews-carousel-component {
+  margin-bottom: 1rem;
+}
+
+.gig-details-main-content {
+  h2 {
+    padding-bottom: 2rem;
+    padding-left: 0;
+    
+  }
+  h4 {
+    font-family: macan-bold;
+  }
+
+  h3 {
+    color: black;
+    font-family: macan-bold;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    line-height: 1.4;
+    @include for-mobile-layout {
+      font-size: 1.5rem;
+
+    }
+  }
+
+  h4 {
+    color: $title-clr;
+    font-family: macan-bold;
+  }
+
+  p {
+    font-family: macan-regular;
+    line-height: 1.5;
+    color: #82858c;
+  }
+}
+
+// all sections selector
+.gig-details-main-content > section {
+  padding: 1rem 0;
+  // width: 100%;
+}
+
+.gig-details-container {
+  // margin-block-start: 2rem;
+  padding-top: 3rem;
+
+  .gig-categories-breadcrumbs {
+    display: flex;
+    font-size: 1rem;
+    height: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+    span , a {
+      font-family: macan-light;
+      color: #62646a;
+      padding-inline-end: 1rem;
+    }
+    & li {
+      margin-inline-end: 1rem;
+      a {
+        color: #62646a;
+        margin-inline-end: 1rem;
+
+        text-decoration: none;
+        transition: color 0.2s;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    span{
+      &:hover{
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.gig-overview {
+  grid-column: 1/2;
+
+  .gig-overview-title {
+    padding: 1rem 0;
+  }
+
+  .gig-seller-info-container {
+    display: flex;
+    height: 3rem;
+    & * {
+      margin-inline-end: 1rem;
+    }
+
+    .gig-seller-pic {
+      height: 3rem;
+      height: 3rem;
+      img {
+        border-radius: 50%;
+        height: 100%;
+      }
+    }
+
+    .gig-seller-info {
+      display: flex;
+      flex-wrap: wrap;
+
+      height: 100%;
+      align-items: center;
+
+      .gig-seller-ratings-count {
+        padding-right: 1rem;
+        border-right: 1px solid grey;
+      }
+    }
+  }
+
+  .gig-gallery-component .carousel {
+    margin-top: 1rem;
+    width: 100%;
+    // height: 30rem;
+    // display: flex;
+    // flex-direction: column;
+
+    & section > div > ol > li > div > img {
+      width: 100%;
+    }
+  }
+}
+
+.seller-description-section {
+  grid-column: 1/2;
+  & .gig-about-seller-header {
+    display: flex;
+    padding-bottom: 1rem;
+    align-items: center;
+    height: 8rem;
+  }
+  & .gig-seller-label {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  & .gig-seller-profile-pic {
+    height: 6rem;
+    width: 6rem;
+    margin-inline-end: 1rem;
+    @include aspect-ratio($type: avatar, $width: 1, $height: 1);
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .gig-seller-description-header {
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 2rem;
+    & ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      border-bottom: 1px solid grey;
+      & li {
+        width: 50%;
+        padding-bottom: 1rem;
+        color: #62646a;
+
+        & :nth-child(2) {
+          font-weight: 600;
+          margin-top: 1rem;
+          font-family: macan-bold;
+        }
+        & :nth-child(1) {
+          font-family: macan-light;
+        }
+      }
+    }
+    .gig-seller-description {
+      padding-top: 1rem;
+      font-family: macan-regular;
+      color: #62646a;
+      line-height: 1.7;
+    }
+  }
+}
+
+.gig-reviews-section {
+  grid-column: 1/2;
+}
+
+//// gigs reviews component ul - li 
+
+.gig-reviews-section .gig-details-reviews-container {
+  display: flex;
+  flex-direction: column;
+
+  .review-add-btn {
+    padding: 12px 24px;
+    background-color: #1dbf73;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-top: 1rem;
+    color: white;
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  .gig-details-review-list {
+    padding-top: 1rem;
+    .review-item {
+      display: flex;
+      padding: 1rem 0 2rem 2rem;
+      border-top: 1px solid #62646a;
+      .gig-reviews-profile-img{
+        background-color: #e4e5e7;
+        max-width: 2rem;
+        margin-left: -2rem;
+        margin-right: 1em;
+        border-radius: 50%;
+        color: #fff;
+        font-weight: 700;
+        height: 2rem;
+        text-transform: uppercase;
+        width: 100%;
+        span{
+          position: relative;
+          left: 11px;
+          top: 7px;
+          font-family: macan-light;
+        }
+      }
+      .gig-reviews-header{
+        .gig-reviews-details{
+          padding: 5px 0;
+          span{
+            font-family: macan-semibold;
+
+          }
+        }
+        .gig-reviews-details > {
+          span:not(:first-child) {
+            margin-left:0.7em
+          }
+        }
+        small{
+          margin-left: 5px;
+          color: #ffb33e;
+          font-weight: 700;
+        }
+        .gig-reviews-flag{
+          display: flex;
+          img{
+            width: 1.4rem;
+            height: 1.4rem;
+          }
+          span{
+            margin-left:0.7em;
+            color: #62646a;
+            position: relative;
+            top: 2px;
+            font-family: macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+          }
+        }
+      }
+      .gig-reviews-description{
+        padding: 1em 0;
+        font-family: macan,Helvetica Neue,Helvetica,Arial,sans-serif;;
+      }
+      .gig-review-like-dislike{
+        padding: 12px 0;
+        font-family: macan-bold,Helvetica Neue,Helvetica,Arial,sans-serif;
+        img{
+          height: 14px;
+          width: 14px;
+        }
+        span{
+          margin-right: 15px;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+      h5 {
+        font-size: 1rem;
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+
+.gig-details-carousel {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+  .carousel__viewport {
+    aspect-ratio: 16/9;
+    width: 100%;
+    .carousel__track {
+      height: auto;
+      width: 100%;
+    }
+  }
+  li {
+    display: block;
+  }
+  .details-carousel-image {
+    // aspect-ratio: 200/330;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+
+
+// gig carousel details review
+
+.gig-carousel-details {
+  display: flex;
+  flex-direction: column;
+  .gig-review-description{
+    max-width: 390px;
+  }
+  .gig-review-header {
+    display: flex;
+    padding: 0 0 0 34px;
+    .gig-review-name {
+      margin-right: 10px;
+      font-size: 16px;
+      font-family: macan-regular;
+      line-height: 140%;
+    }
+    .gig-review-country-name{
+      position: relative;
+    top: 2px;
+    }
+    .gig-review-country-flag{
+      font-family: macan-regular;
+      display: flex;
+    }
+    img{
+      height: 24px;
+      width: 24px;
+      margin-right: 10px;
+      bottom: 2px;
+    }
+  }
+}
+// // gig reviews details review carousel 
+
+.gig-reviews-carousel-wrapper{
+    display: flex;
+    width: inherit;
+    padding: 16px 24px;
+    border: 1px solid #e4e5e7;
+    border-radius: 4px;
+      .gig-reviews-profile-img-carousel{
+        background-color: #e4e5e7;
+        max-width: 2rem;
+        margin-right: 1em;
+        border-radius: 50%;
+        color: #fff;
+        font-weight: 700;
+        height: 2rem;
+        text-transform: uppercase;
+        width: 100%;
+        span{
+          position: relative;
+          left: 1px;
+          top: 7px;
+        }
+      }
+      .gig-reviews-header-carousel{
+        display: flex;
+        padding-bottom: 4px;
+        .gig-review-span-name{
+          font-family:  macan-bold;
+        }
+        img{
+          height: 24px;
+          width: 24px;
+          bottom: 4px;
+          position: relative;
+        }
+        span {
+          color: #62646a;
+          position: relative;
+          font-family: macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+          top: 2px;
+          display: inline-flex;
+        }
+        small{
+          margin-left: 5px;
+        }
+      }
+      .gig-reviews-header-carousel > {
+        span:not(:first-child) {
+          margin-left:0.7em
+        }
+      }
+      .gig-description-carousel{
+        text-align: start;
+        font-family: macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+      }
+    }
+

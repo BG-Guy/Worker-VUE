@@ -1,0 +1,327 @@
+.disable-scrolling {
+  overflow: hidden;
+}
+
+.test {
+  background-color: aqua;
+}
+//add mixin for carousel class specific for that class.
+
+// carousel component --->
+
+// @media only screen and (max-width: 700px) {
+//   .carousel__slide {
+//     width: 50% !important;
+//   }
+// }
+
+@media only screen and (min-width: $screen-size-xl) {
+  .max-width-container {
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    & h2 {
+      font-size: 32px;
+      line-height: 120%;
+      color: #404145;
+      font-family: macan-semibold;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.logged-out-homepage .hero-wrapper .hero-backgrounds > div {
+  background-position: bottom;
+}
+
+// .subcategory-wrapper img {
+  
+// }
+
+
+.subcategory-wrapper {
+  height: 345px;
+  background-color: #efeff0;
+  cursor: pointer;
+  aspect-ratio: 330/200;
+  width: 252px;
+  img {
+    object-fit: cover;
+    display: block;
+    height: 345px;
+    width: 252px;
+    border-radius: 4px;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+
+  }
+}
+
+.subcategory {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  h2 {
+    font-size: 32px;
+    line-height: 120%;
+    color: #404145;
+    font-family: Helvetica, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    
+  }
+  h4 {
+    position: relative;
+    text-align: start;
+    z-index: 1;
+    color: #fff;
+    padding: 16px;
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 700;
+    font-family: Helvetica, Helvetica, Arial, sans-serif;
+  }
+  small {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    display: block;
+  }
+}
+
+// carousel component --->
+
+// Explore the marketplace -------------- //
+
+.Explore-the-marketplace .main-categories ,
+ul {
+  list-style: none;
+  list-style-image: none;
+}
+
+h2 {
+
+    padding-left: 1rem;
+    font-family: macan-semibold;
+}
+
+.categories-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  li {
+    padding: 22px;
+    
+    text-align: center;
+    flex: 1 1 0;
+  }
+  li > {
+    a {
+      color: #222325;
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  li > {
+    a {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 45px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+        padding: 0 0 8px;
+        width: 48px;
+        border-bottom: 2px solid #c5c6c9;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+  a {
+    &:hover {
+      &::after {
+        width: 90px;
+        border-color: #1dbf73;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+  img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 15px;
+  }
+}
+
+// Explore the marketplace -------------- //
+
+// info home page ------------
+
+.home-page-info-container {
+  // padding-top: 64px;
+  padding-bottom: 64px;
+  flex: 0 1 auto;
+  flex-flow: row wrap;
+  background-color: #f1fdf7;
+  margin-bottom: 5.938rem;
+  width: 100%;
+  .main-info {
+    
+    .content {
+      display: flex;
+      flex-flow: row wrap;
+      flex: 0 1 auto;
+      // @include for-wide-layout {
+        
+      // }
+      @include for-normal-layout {
+        flex-direction: column;
+        align-items: center;
+        flex-direction: row;
+        
+        // align-items: stretch;
+      }
+      
+    }
+    .home-page-info {
+      padding: 4rem 1rem ;
+      // flex: 0 0 auto;
+      align-items: center;
+      flex-flow: row wrap;
+      @include for-normal-layout {
+        // padding: 4rem 1rem;
+        flex-basis: 46.66667%;
+        max-width: 46.66667%;
+      }
+      @include for-mobile-layout {
+        padding: 1rem;
+
+      }
+      li {
+        padding-bottom: 24px;
+        list-style: none;
+        list-style-image: none;
+        h6 {
+          display: flex;
+          padding-bottom: 8px;
+          align-items: flex-start;
+          font-size: 18px;
+          line-height: 140%;
+          font-weight: 700;
+          color: #404145;
+          margin-block-start: 2.33em;
+          margin-block-end: 2.33em;
+          margin: 0;
+          span {
+            fill: rgb(122, 125, 133);
+            margin-right: 10px;
+            min-width: 24px;
+          }
+        }
+        p {
+          font-size: 18px;
+          font-stretch: 100%;
+          font-weight: 400;
+          line-height: 26px;
+          text-align: left;
+        }
+      }
+      h2 {
+        padding-bottom: 24px;
+        font-size: 32px;
+        line-height: 120%;
+        font-weight: 700;
+        color: #404145;
+        font-family: macan-bold;
+      }
+    }
+    .home-page-img {
+      position: relative;
+      margin: auto;
+      
+      img {
+        width: 100%;
+        object-fit: contain;
+        padding-inline: 8px;
+      }
+      @include for-normal-layout {
+        flex-basis: 52.5%;
+        min-width: 50px;
+        // max-width: 43.33333%;
+        
+      }
+    }
+  }
+}
+
+
+
+
+
+.video-modal .picture-wrapper:after {
+  content: "";
+  display: inline-block;
+  background: url(https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/desktop-play-button.c1196d6.png)
+    no-repeat;
+  background-size: 80px;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.selling-text {
+  li > {
+    h6 {
+      padding-bottom: 8px;
+      color: #404145;
+      display: flex;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      font-size: 18px;
+      line-height: 140%;
+      margin-right: 10px;
+      min-width: 24px;
+    }
+  }
+  p {
+    font-size: 18px;
+    line-height: 26px;
+    padding-right: 11%;
+  }
+}
+
+// speech recognition svg 
+
+.speech-recognition-image{
+  position: relative;
+    right: 140px;
+    transition: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.speech-recognition-gif{
+  height: 24px;
+  width: 24px;
+  position: relative;
+  right: 140px;
+  top:10px;
+  transition: 0.5s;
+  transition-duration: 0.3s;
+}

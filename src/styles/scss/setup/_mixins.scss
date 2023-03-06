@@ -1,0 +1,105 @@
+// mixin like buttons and cards here
+
+@mixin btn-small {
+  padding: 8px 16px;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 0 3px 3px 0;
+  border: none;
+  text-align: center;
+  background-color: #1dbf73;
+  color: #fff;
+  height: 34px;
+  font-family: macan-bold;
+}
+
+@mixin btn-large {
+  padding: 8px 16px;
+  height: 48px;
+
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 0 3px 3px 0;
+  border: none;
+  text-align: center;
+  background-color: #1dbf73;
+  color: #fff;
+}
+
+@mixin nav-input {
+  width: 100%;
+  border-right: 0;
+  font-family: macan-light;
+  border-color: #dadbdd;
+  border-radius: 3px 0 0 3px;
+  padding: 7px 7px 7px 38px;
+  background-color: #fff;
+  height: 34px;
+  font-size: 15px;
+  box-shadow: none;
+  cursor: text;
+  outline: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  border: $border-light;
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Media queries Breakpoint mixins */
+
+@mixin for-mobile-layout {
+  @media (max-width: $screen-size-xs) {
+    @content;
+  }
+}
+
+@mixin for-narrow-layout {
+  @media (min-width: $screen-size-s) {
+    @content;
+  }
+}
+
+@mixin for-normal-layout {
+  @media (min-width: $screen-size-l) {
+    @content;
+  }
+}
+
+@mixin for-wide-layout {
+  @media (min-width: $screen-size-xl) {
+    @content;
+  }
+}
+
+@mixin aspect-ratio($type: regular, $width: 1, $height: 1) {
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: calc($height / $width) * 100%;
+  }
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  > img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @if ($type == avatar) {
+    > img {
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,238 @@
+.login-active {
+  color: $clr-green;
+  z-index: 9;
+  background-color: green;
+}
+
+.notification-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  width: 18px;
+  font-size: 0.8rem;
+  position: absolute;
+  border-radius: 50%;
+  top: 2.55rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.logged-user-avatar {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #19a463;
+  display: flex;
+}
+
+.signup-active {
+  background-color: #1dbf73;
+  color: #fff !important;
+  border: none !important;
+  z-index: 9;
+}
+
+.mobile-search-bar-container {
+  width: 100%;
+  background-color: white;
+  padding: 0 1rem 1rem 1rem;
+  opacity: 0;
+  transform: rotateX(90);
+  transition: all 0.5s;
+
+  .mobile-search-bar {
+    @include nav-input;
+    font-family: macan-light;
+  }
+
+  .search-icon {
+    top: 30px;
+    left: 10px;
+
+    position: relative;
+  }
+}
+
+.logged-out-nav-container {
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  z-index: 9999;
+  transition: 0.5s;
+  position: fixed;
+
+  top: 0px;
+
+  .categories-menu-package {
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    border-bottom: 1px solid #e4e5e7;
+    border-top: 1px solid #e4e5e7;
+    transition: 0.4s;
+    opacity: 0;
+    transform: rotateX(90deg);
+    ul {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: space-between;
+      // padding: 0 2rem;
+
+      li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & a {
+          font-family: macan-light;
+          color: #74767e;
+        }
+
+        &:hover {
+          box-shadow: 0px 2px 0px 0px #19a463;
+        }
+      }
+    }
+  }
+}
+
+// .menu-package-open {
+//   opacity: 1 !important;
+//   -webkit-transform: rotateX(0deg);
+//   transform: rotateX(0deg) !important;
+//   -webkit-transition: -webkit-transform 0.2s;
+//   transition: -webkit-transform 0.1s;
+//   -o-transition: transform 0.1s;
+//   transition: transform 0.1s;
+//   transition: transform 0.1s, -webkit-transform 0.1s;
+// }
+
+//nav links with transparent mode
+.header-transparent {
+  background-color: transparent;
+  & ul li {
+    a {
+      .nav-link {
+        color: white;
+      }
+
+      .business-link {
+        color: white;
+      }
+    }
+    .join {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+  }
+}
+
+.logged-out-nav {
+  display: flex;
+  max-width: $screen-size-xl;
+  align-items: center;
+  height: 80px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  font-family: Chunk;
+  font-size: xx-large;
+  @media (max-width: $screen-size-m) {
+    display: flex;
+    flex: 0.95;
+    justify-content: center;
+  }
+}
+.nav-search {
+  margin-right: auto;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  max-width: 374px;
+  transition: all 0.5s;
+
+  .search-icon {
+    margin-inline-start: 10px;
+  }
+
+  button {
+    @include btn-small;
+    &:hover {
+      background-color: #19a463;
+      border-color: #19a463;
+    }
+  }
+
+  input {
+    @include nav-input;
+  }
+}
+
+// .link-list.header-transparent ul >*:hover {
+//   box-shadow: transparent !important;
+//   display: none;
+
+// }
+
+//nav links without transparent mode
+.link-list {
+  height: 100%;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    height: 100%;
+    & i {
+      text-decoration: none;
+    }
+
+    & li {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+      // color: #62646a;
+      font-family: macan-regular;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .business-link {
+        color: #1e1692;
+      }
+
+      a .nav-link:hover {
+        color: #1dbf73 !important;
+        cursor: pointer;
+      }
+    }
+    .join {
+      border: solid 1px #1dbf73;
+      height: 100%;
+      color: #1dbf73;
+      padding: 7px 20px;
+      border-radius: 4px;
+      position: relative;
+      margin-top: -7px;
+      font-family: macan-regular;
+      &:hover {
+        border: solid 1px #1dbf73;
+        background-color: #1dbf73;
+        color: white !important;
+      }
+    }
+  }
+}
+
+.nav-search-results-box {
+  width: 296px !important;
+  position: fixed !important;
+  top: 55px !important;
+  z-index: 10 !important;
+}

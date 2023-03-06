@@ -1,0 +1,90 @@
+.app-container {
+  padding: 0 2rem;
+}
+
+.page-content-container {
+  margin: 0 auto;
+  padding: 7.5rem 1rem 1rem 1rem ;
+  max-width: 1400px;
+  @include for-mobile-layout {
+    padding: 7.5rem 1rem;
+  }
+
+  //   @media (min-width: $screen-size-m) {
+  //     padding: 7.5rem 1rem;
+  //   }
+  //   @media (min-width: $screen-size-l) {
+  //     padding: 7.5rem 1rem;
+  //   }
+  @media (min-width: $screen-size-xl) {
+    padding: 7.5rem 0;
+  }
+}
+.trusted-by-container {
+  background-color: rgb(212, 212, 212);
+  height: 60px;
+}
+.popular-services-container {
+   max-width: 1430px;
+   margin: auto;
+   padding: 4rem 1rem;
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    @include for-mobile-layout {
+      padding: 4rem 1rem;
+      .popular-service-carousel {
+        width: 290px;
+        margin: auto;
+
+      }
+
+    }
+  
+  // height: 50vh;
+  h2 {
+    padding: 2rem 0;
+    @include for-normal-layout {
+      padding: 2rem .5rem;
+    }
+    font-family: macan-semibold;
+    font-size: 2rem;
+  }
+  & li {
+    // width: 20% !important;
+  }
+
+   .carousel__prev {
+    // position: absolute;
+    left: 15px;
+  }
+   .carousel__next {
+    // position: absolute;
+    right: 15px;
+  }
+}
+
+.home-explore-marketplace-container {
+  height: auto;
+}
+.home-fiver-business-container {
+  
+  background-color: #0d084d;
+  height: 80vh;
+}
+.home-get-inspired-container {
+  background-color: #f1fdf7;
+  height: 60vh;
+}
+
+
+.max-width-container {
+  @media (min-width: $screen-size-xl) {
+    max-width: 1400px;
+    
+  }
+  @media (max-width: $screen-size-xl) {
+    // padding: 0 2rem;
+  }
+  
+}
